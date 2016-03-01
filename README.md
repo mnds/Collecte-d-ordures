@@ -6,6 +6,6 @@ Bienvenue sur le projet WS/Android ayant pour objet la gestion de la collecte d'
 Exemple: [MSA] exemple de commit
 - Rendre les commit le plus atomique possible: par là j'entends qu'un commit ne doit porter que sur une fonctionnalité à la fois, cela facilite les revert;
 
-Voilà c'est tout ! Pour ceux qui ne sont pas encore familiers avec git, je vous invite à consulter le tuto d'openclassrooms https://openclassrooms.com/courses/gerez-vos-codes-source-avec-git
+Voilà c'est tout ! Pour ceux qui ne sont pas encore familiers avec git, je vous invite à consulter le tuto d'openclassrooms pour une prise en main rapide: https://openclassrooms.com/courses/gerez-vos-codes-source-avec-git
 
 Allez au boulot !
