@@ -36,5 +36,7 @@
 ehthumbs.db
 Thumbs.db
 
-# Visual Paradigm working project file
+# IDE and other softwares files
 *.working
+*.vpp~*
+nb-configuration.xml
