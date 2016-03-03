@@ -5,44 +5,18 @@
  */
 package sn.esp.dgi.model;
 
-import java.io.Serializable;
 import java.util.List;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.NotNull;
 
 /**
  *
  * @author mnds
  */
 @Entity
-public class Collecteur implements IUtilisateur, Serializable {
-    
-    /**
-     * Id du collecteur
-     */
-    @Id @GeneratedValue
-    private Long id;
-    
-    /**
-     * Login du collecteur
-     */
-    @NotNull
-    private String login;
-    
-    /**
-     * Prénom du collecteur
-     */
-    @NotNull
-    private String prenom;
-    
-    /**
-     * Nom du collecteur
-     */
-    @NotNull
-    private String nom;
+@DiscriminatorValue("COLLECTEUR")
+public class Collecteur extends Utilisateur {
     
     /**
      * Points de collecte possédés par le collecteur
@@ -55,70 +29,6 @@ public class Collecteur implements IUtilisateur, Serializable {
      */
     @OneToMany(mappedBy = "collecteur")
     private List<Collecte> collectes;
-    
-    /**
-     * @return the id
-     */
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    @Override
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    /**
-     * @return the login
-     */
-    @Override
-    public String getLogin() {
-        return login;
-    }
-
-    /**
-     * @param login the login to set
-     */
-    @Override
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    /**
-     * @return the prenom
-     */
-    @Override
-    public String getPrenom() {
-        return prenom;
-    }
-
-    /**
-     * @param prenom the prenom to set
-     */
-    @Override
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    /**
-     * @return the nom
-     */
-    @Override
-    public String getNom() {
-        return nom;
-    }
-
-    /**
-     * @param nom the nom to set
-     */
-    @Override
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
 
     /**
      * @return the pointsDeCollectes
