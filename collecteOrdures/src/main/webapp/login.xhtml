@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" >
+    <h:head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Page d'authentification</title>
+
+        <!-- BOOTSTRAP STYLES-->
+        <h:outputStylesheet library="css" name="bootstrap.css" />
+        <!-- FONTAWESOME STYLES-->
+        <h:outputStylesheet library="css" name="font-awesome.css" />
+        <!-- GOOGLE FONTS-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+    </h:head>
+    <h:body style="background-color: #E2E2E2;">
+        <div class="container">
+            <div class="row text-center " style="padding-top:100px;">
+                <div class="col-md-12">
+                    <h:graphicImage value="resources/img/enterprise.png" />
+                </div>
+            </div>
+            <div class="row ">
+
+                <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+
+                    <div class="panel-body">
+                        <form id="formLogin" method="post" action="j_security_check">
+                            <hr />
+                            <h5>Veuillez entrer vos identifiants</h5>
+                            <br />
+
+                            <h:panelGrid columns="3">
+                                <div class="form-group input-group">
+                                    <h:outputLabel for="j_username" value="Nom d'utilisateur: "/>
+                                    <!-- 	                                        <span class="input-group-addon"><i class="fa fa-tag"  ></i></span> -->
+                                    <h:inputText id="j_username" class="form-control" required="true"/>
+                                </div>
+                                <div class="form-group input-group">   
+                                    <h:outputLabel for="j_password" value="Mot de passe: "/>
+                                    <!-- 	                                        <span class="input-group-addon"><i class="fa fa-lock"  ></i></span> -->
+                                    <p:password id="j_password" class="form-control"/>
+                                </div>   
+                            </h:panelGrid>
+                            <h:commandButton class="btn btn-primary " type="submit" value="Connexion"/>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </h:body>
+</html>

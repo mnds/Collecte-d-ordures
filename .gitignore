@@ -40,3 +40,4 @@ Thumbs.db
 *.working
 *.vpp~*
 nb-configuration.xml
+/collecteOrdures/target/
